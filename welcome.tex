@@ -5,16 +5,19 @@
 
 \chapter{欢迎使用}
 
-亲爱的同学，现在你已经拿到了属于自己的 \wpx. \wpx 使用 HP 20b Business Consultant 或 HP 30b Business Profressional 的硬件，因而可以利用其高速处理器获得极佳性能，以及 HP 30b 的按键手感。
+亲爱的同学，现在你已经拿到了属于自己的 \wpx. \wpx 使用 HP 20b Business Consultant 或 HP
+ 30b Business Profressional 的硬件，因而可以利用其高速处理器获得极佳性能，以及 HP 30b 
+的按键手感。
 
-而 \wpx 的固件和用户交互界面则是经过我们精心设计，从“芯”开始。历经反复打磨，只为呈现最快、最轻便而最强的\stress{科学}计算器。
+而 \wpx 的固件和用户交互界面则是经过我们精心设计，从“芯”开始。历经反复打磨，只为呈现最快、最轻便
+且最强的\stress{科学}计算器。
 
-\wpx 的功能基于 1988年发售的 HP-42S RPN 科学计算器，除其提供的功能外，我们还增设了来自 HP-16C 的计算机科学功能、来自 HP-32SII 的分数模式，以及来自 HP-21S 的概率分布计算功能。我们还添加了更多关于计算、统计、物理、机械以及编程功能，例如：
+\wpx 的功能基于 1988年发售的 HP-42S RPN 科学计算器，除其提供的功能外，我们还增设了来自 
+HP-16C 的计算机科学功能、来自 HP-32SII 的分数模式，以及来自 HP-21S 的概率分布计算功能。
+我们还添加了更多关于计算、统计、物理、机械以及编程功能，例如：
 
 \li
-
-% fixme: 人名和数学专业名词！
-\item 欧拉 (Euler) \beta 函数和黎曼 (Riemann) \zeta 函数、伯努利 (Bernoulli) 数列和斐波那契 (Fibonacci) 数列、Lambert W 函数、误差函数，以及 Chebyshev, Hermite, Laguerre, Lengendre orthogonal 多项式。
+\item 欧拉 (Euler) $\beta$ 函数和黎曼 (Riemann) $\zeta$ 函数、伯努利 (Bernoulli) 数列和斐波那契 (Fibonacci) 数列、Lambert W 函数、误差函数，以及 Chebyshev, Hermite, Laguerre, Lengendre orthogonal 多项式。
 \item 各种统计分布和其反函数，如泊松 (Poisson) 分布、二项分布、几何分布、柯西-洛伦兹 (Cauchy-Lorentz) 分布、指数分布、 Logistic, Weibull, Lognormal 和高斯分布。
 \item 可编程的求和与求积、求导、解最高四次方程（包括复数解）
 \item 质数（又称“素数”） (Prime) 判别
@@ -26,6 +29,21 @@
 \item 与计算机进行双向通信，以及 HP 82240A/B 红外打印功能（需要硬件支持，见附录）
 \item 内存断电保护
 \item 希腊字母与拉丁字母集支持
-
 \lix
 
+\wpx 是首个突破 4 级栈的 RPN 计算器，这样就不用再担心计算时出现栈溢出问题。\wpx 通过 LASTx 
+寄存器实现向下兼容的栈大小调整机制：其可以设置为 4 级传统模式，也可设置为 8 级模式。
+
+\wpx 还提供 107 个通用寄存器、 112 全局用户标志和最高 928 步编程步数，闪存中则提供多达 6014 
+步编程步数。不同的\hyperref[chapter:modding]{固件配置}可能会导致编程步数有所变化。
+
+\section{字体格式}
+
+\li
+\item 本手册的正文为思源字体，强调内容则使用\stress{着重号}，计算器命令则通常使用大写字母
+\item 计算器按键使用框包围（如 \calckey{CPX}, \keyH ），计算器屏幕上的内容则用点阵字体或七段字体显示（如 \dotmat{Hello!}, \seg{123}）
+\item 变量使用小写粗体（如 \var{r02}, \var{y}），寄存器地址使用大写粗体（如 \reg{R02}, \reg{Y}）
+\lix
+
+以及，``\stress{\bold{警告}}''字样表示该操作存在极高风险。整本手册中仅有 4 处该标志。无视这些警告可能会导致您的
+计算器永久停止工作，或导致更严重的后果。

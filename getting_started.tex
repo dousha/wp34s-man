@@ -1,0 +1,95 @@
+% getting_started.tex
+% TeX fragment, part of manual.tex
+% DO NOT FEED THIS DIRECTLY TO TeX
+% Author: dousha
+
+\chapter{开始使用}
+
+如果您已经知道如何使用其他 RPN 计算器，那么 \wpx 的使用与其他计算器没有什么不同。您可以
+\hyperref[section:basic_ops]{跳过}接下来关于 RPN 的内容。
+
+如果这是您第一次使用 RPN 计算器，请阅读接下来的内容。
+
+\section{RPN 简介}
+
+RPN (Reverse Polish Notation, 逆波兰表达式) 是早期惠普计算器所使用的一种输入方式。
+其不同于普通计算器之处在于这种输入方式先输入数字，然后再输入运算符号。
+这种输入方法能够模拟笔算时的步骤，使复杂算式能够快速而准确地进行键入，同时省去了输入括号的负担。
+这种输入方式也和计算机计算方式相同，因此可以精简计算解析模块以腾出空间给更复杂的功能使用，从而使得
+计算器具备更多功能。
+
+\subsection{RPN 计算举例}
+
+我们从一个简单的例子开始：
+
+$$ 1234 * 567 $$
+
+我们先在纸上写 1234, 然后换行，再对齐写上 567, 再计算乘法。
+这个思考方法在 RPN 中可以写作 1234 567 *.
+
+现在我们看一个更复杂的例子：
+
+$$ \frac{3.5 * (4^2 + 6)}{(7.25 - 3.06)^2} $$
+
+那么，在 RPN 中，这个算式可以写作：
+
+4 2 pow 6 + 3.5 * 7.25 3.06 - 2 pow /
+
+其思考方法和笔算统一：
+
+\ol
+\item 计算 4 的 2 次方 (4 2 pow)
+\item 计算上一步结果与 6 的和 (6 +)
+\item 计算上一步结果与 3.5 的积 (3.5 *)
+\item 计算 7.25 与 3.06 的差 (7.25 3.06 -)
+\item 计算上一步结果的 2 次方 (2 pow)
+\item 计算第 3 步与第 5 步的商 (/)
+\olx
+
+如果这些内容难以理解，建议辅助参考 HP-42S 的说明书。
+
+\label{section:basic_ops}
+\section{基本操作}
+
+要打开计算器，按位于左下角的 \calckey{ON} 键。
+要关闭计算器，先按下 \keyH ，再按下 \calckey{ON}。
+要调节显示屏的对比度，按住 \calckey{ON}, 再按 \calckey{+} 或 \calckey{-} 键调节
+对比度。
+
+\wpx 的键盘标签极为密集，基本上一个按键平均有 5 个功能。这些功能可以根据其标签颜色进行相应的调用
+操作。
+
+以键盘上的 \calckey{5} 为例子：
+
+\ol
+\item 直接按下 \calckey{5} = 键入数字 5
+\item 按下 \keyF + \calckey{5} = 调用统计平均功能 \calckeyF{$\bar{x}$}
+\item 按下 \keyG + \calckey{5} = 调用统计标准差功能 \calckeyG{s}
+\item 按下 \keyH + \calckey{5} = 打开统计功能目录 \calckeyH{\underline{STAT}}
+\item 灰色的 \calckey{R} 代表在字母输入模式下按下该键 = 输入 R
+\olx
+
+在按下 \keyF, \keyG, \keyH 时，您应注意到屏幕左上角对应显示的 \dotmatsmall{f}, 
+\dotmatsmall{g} 和 \dotmatsmall{h}. 您也可以按住这些修饰键不放并按下另一个按键来调用
+对应功能。
+
+我们将以简单的例子演示这个功能：
+
+问题：考虑点$(1,1)$, 其转换成极坐标的结果为？（$(\sqrt{2}, \frac{\pi}{2})$）
+
+我们先将角度调为角度制，便于阅读结果，那么我们键入 \keyG + \calckey{STO}, 这个组合对应 
+\calckeyG{DEC}, 即角度制。
+
+此时屏幕上的 \seg{\inddeg} 指示灯应该亮起。
+
+现在，我们依次键入 \calckey{1}, \calckey{ENTER}, \calckey{1}, \keyG + 
+\calckey{$\rightarrow$} (= \calckeyG{$\rightarrow P$}).
+
+此时计算器显示 \calcscr{<45}{r}{1.41421356237}{~~~~}. 
+结果为$(\sqrt{2}, \frac{\pi}{2})$
+
+需要注意到科学计算器的局限性 --- 没有代数系统。这也意味着无理数无法直接表示。
+
+注意到，在 \calckeyG{$\rightarrow P$} 上还印着其他功能。通常这些功能是函数的逆
+运算。比如该键（转化为极坐标）对应的功能 \calckeyF{R $\leftarrow$} 则是将极坐标转化为
+直角坐标。

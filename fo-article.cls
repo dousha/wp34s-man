@@ -10,12 +10,13 @@
 \usepackage{xeCJK,xeCJKfntef}
 \setmainfont{Noto Sans CJK SC Regular}
 \setCJKmainfont{Noto Sans CJK SC Regular}
+\setCJKmonofont{Droid Sans Mono}
 \usepackage[a4paper,left=2cm,right=2cm]{geometry}
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.eps,.pdf,.png,.jpg}
-\usepackage{hyperref}
+\usepackage[colorlinks,linkcolor=black,anchorcolor=black,citecolor=black]{hyperref}
 
 \fancypagestyle{heading}{%
 \fancyhf{}

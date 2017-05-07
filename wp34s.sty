@@ -5,6 +5,8 @@
 % Author: dousha
 
 \usepackage{fontspec}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{fancybox}
 
 \providecommand{\wpx}[0]{WP~34S}
 
@@ -13,6 +15,7 @@
 \providecommand{\dotmenu}[1]{{\setmainfont{WP 34S Solid Font Regular} #1}}
 \providecommand{\dotmenusmall}[1]{{\setmainfont{WP 34S Solid Font Small} #1}}
 \providecommand{\seg}[1]{{\setmainfont{WP34S Segment Font} #1}}
+\providecommand{\segsmall}[1]{{\tiny{\seg{#1}}}}
 
 \providecommand{\xbar}[0]{\char"E001}
 \providecommand{\ybar}[0]{\char"E002}
@@ -66,3 +69,30 @@
 \providecommand{\inddegree}[0]{\char"00E8}
 \providecommand{\indthreesixty}[0]{\char"00E8}
 \providecommand{\indrpn}[0]{\char"00E9}
+
+\providecommand{\calckey}[1]{\fcolorbox{black}{white}{\color{black}{#1}}}
+\providecommand{\keyF}[0]{\colorbox{orange}{\color{white}f}}
+\providecommand{\keyG}[0]{\colorbox{blue}{\color{white}g}}
+\providecommand{\keyH}[0]{\colorbox{green}{\color{white}h}}
+\providecommand{\calckeyF}[1]{\fcolorbox{orange}{white}{\color{orange}{#1}}}
+\providecommand{\calckeyG}[1]{\fcolorbox{blue}{white}{\color{blue}{#1}}}
+\providecommand{\calckeyH}[1]{\fcolorbox{green}{white}{\color{green}{#1}}}
+\providecommand{\reg}[1]{\uppercase{\bold{#1}}}
+\providecommand{\var}[1]{\lowercase{\bold{#1}}}
+\providecommand{\mono}[1]{\texttt{#1}}
+
+\providecommand{\calcscr}[4]{%
+	\par
+	\begin{center}
+	\fcolorbox{white}{YellowGreen}{%
+		\parbox{9em}{%
+			\makebox[9em][l]{\dotmat{#1}}
+			\par
+			\makebox[9em][#2]{%
+				\seg{#3}
+				\raisebox{0.7ex}{\segsmall{#4}}}
+		}
+	}
+	\end{center}
+	\par
+}
